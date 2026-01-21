@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmileFace - Skin Problems Solutions</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="" href="favicon.ico">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>😊 SmileFace</h1>
+                <p>Your Healthy Skin Companion</p>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#skin-problems" class="nav-link">Skin Problems</a></li>
+                <li><a href="#solutions" class="nav-link">Solutions</a></li>
+                <li><a href="#prevention" class="nav-link">Prevention</a></li>
+                <li><a href="#tips" class="nav-link">Tips</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Dream of Healthy and Glowing Skin</h1>
+            <p>SmileFace provides you with information and solutions for all skin problems</p>
+            <button class="cta-btn" onclick="scrollToSection('skin-problems')">Get Started Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Ccircle cx='200' cy='200' r='180' fill='%23FFE5E5'/%3E%3Ccircle cx='150' cy='160' r='20' fill='%23333'/%3E%3Ccircle cx='250' cy='160' r='20' fill='%23333'/%3E%3Cpath d='M 150 250 Q 200 300 250 250' stroke='%23FF6B9D' stroke-width='8' fill='none'/%3E%3C/svg%3E" alt="Happy Face">
+        </div>
+    </section>
+
+    <!-- Skin Problems Section -->
+    <section id="skin-problems" class="skin-problems">
+        <div class="container">
+            <h2 class="section-title">Main Skin Problems</h2>
+            <p class="section-subtitle">Understand common skin problems and their causes</p>
+            
+            <div class="problems-grid">
+                <div class="problem-card" data-problem="acne">
+                    <h3>Acne</h3>
+                    <p class="problem-icon">🔴</p>
+                    <p class="problem-description">A common problem caused by oil and bacteria, especially in adolescence.</p>
+                    <button class="learn-btn" onclick="openModal('acne')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="pimples">
+                    <h3>Pimples</h3>
+                    <p class="problem-icon">🔻</p>
+                    <p class="problem-description">Small red bumps caused by bacterial infection.</p>
+                    <button class="learn-btn" onclick="openModal('pimples')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="blackheads">
+                    <h3>Blackheads</h3>
+                    <p class="problem-icon">⬛</p>
+                    <p class="problem-description">Dirt accumulated in pores that appear black.</p>
+                    <button class="learn-btn" onclick="openModal('blackheads')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="whiteheads">
+                    <h3>Whiteheads</h3>
+                    <p class="problem-icon">⚪</p>
+                    <p class="problem-description">Dirt covered by skin in pores that appear white.</p>
+                    <button class="learn-btn" onclick="openModal('whiteheads')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="eczema">
+                    <h3>Eczema</h3>
+                    <p class="problem-icon">🔴</p>
+                    <p class="problem-description">Skin itching, inflammation and redness problem.</p>
+                    <button class="learn-btn" onclick="openModal('eczema')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="psoriasis">
+                    <h3>Psoriasis</h3>
+                    <p class="problem-icon">⚪</p>
+                    <p class="problem-description">A problem caused by excessive skin cell growth.</p>
+                    <button class="learn-btn" onclick="openModal('psoriasis')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="darkspots">
+                    <h3>Dark Spots</h3>
+                    <p class="problem-icon">⬛</p>
+                    <p class="problem-description">Spots on the skin caused by sunlight and age.</p>
+                    <button class="learn-btn" onclick="openModal('darkspots')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="wrinkles">
+                    <h3>Wrinkles</h3>
+                    <p class="problem-icon">➰</p>
+                    <p class="problem-description">Lines caused by age, sun rays and dryness.</p>
+                    <button class="learn-btn" onclick="openModal('wrinkles')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="dryskin">
+                    <h3>Dry Skin</h3>
+                    <p class="problem-icon">🏜️</p>
+                    <p class="problem-description">Itching and roughness caused by lack of moisture.</p>
+                    <button class="learn-btn" onclick="openModal('dryskin')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="oilyskin">
+                    <h3>Oily Skin</h3>
+                    <p class="problem-icon">💧</p>
+                    <p class="problem-description">Skin that appears sticky and shiny due to excess sebum.</p>
+                    <button class="learn-btn" onclick="openModal('oilyskin')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="sensitiveskin">
+                    <h3>Sensitive Skin</h3>
+                    <p class="problem-icon">⚠️</p>
+                    <p class="problem-description">Skin easily affected by chemicals and products.</p>
+                    <button class="learn-btn" onclick="openModal('sensitiveskin')">Learn More</button>
+                </div>
+
+                <div class="problem-card" data-problem="fungal">
+                    <h3>Fungal Infection</h3>
+                    <p class="problem-icon">🍄</p>
+                    <p class="problem-description">Infection caused by fungus causing itching and redness.</p>
+                    <button class="learn-btn" onclick="openModal('fungal')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="problemModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <h2 class="section-title">Solutions and Treatments</h2>
+            <p class="section-subtitle">Effective solutions for skin problems</p>
+            
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <h3>🏥 Medical Treatments</h3>
+                    <ul>
+                        <li><strong>Benzoyl Peroxide:</strong> To kill bacteria in acne</li>
+                        <li><strong>Salicylic Acid:</strong> To remove dead cells and clean pores</li>
+                        <li><strong>Tretinoin:</strong> For wrinkles and dark spots</li>
+                        <li><strong>Hydrocortisone Cream:</strong> For eczema and inflammation</li>
+                        <li><strong>Antifungal Creams:</strong> For fungal infections</li>
+                        <li><strong>Antibiotics:</strong> For severe infections</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>🏡 Home Remedies</h3>
+                    <ul>
+                        <li><strong>Tea Tree Oil:</strong> For acne and infections</li>
+                        <li><strong>Aloe Vera:</strong> To reduce inflammation and itching</li>
+                        <li><strong>Honey:</strong> For antibacterial properties</li>
+                        <li><strong>Cucumber:</strong> For cooling and moisture</li>
+                        <li><strong>Neem:</strong> To prevent infection</li>
+                        <li><strong>Turmeric:</strong> To reduce inflammation</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>💇 Professional Treatments</h3>
+                    <ul>
+                        <li><strong>Microdermabrasion:</strong> To remove dead cells</li>
+                        <li><strong>Chemical Peels:</strong> For deep cleansing</li>
+                        <li><strong>Laser Therapy:</strong> For spots and wrinkles</li>
+                        <li><strong>Dermatology Treatment:</strong> Expert consultation</li>
+                        <li><strong>Facial Treatments:</strong> Regular skin care</li>
+                        <li><strong>PRP Therapy:</strong> To rejuvenate skin</li>
+                    </ul>
+                </div>
+
+                <div class="solution-card">
+                    <h3>🧴 Proper Skincare Routine</h3>
+                    <ul>
+                        <li><strong>Morning:</strong> Wash → Toner → Serum → Moisturizer → Sunscreen</li>
+                        <li><strong>Night:</strong> Wash → Toner → Serum → Night Cream</li>
+                        <li><strong>2x per week:</strong> Scrubbing</li>
+                        <li><strong>1x per week:</strong> Face mask</li>
+                        <li><strong>Always:</strong> Apply sunscreen (SPF 30+)</li>
+                        <li><strong>Important:</strong> Wash thoroughly before bed</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Section -->
+    <section id="prevention" class="prevention">
+        <div class="container">
+            <h2 class="section-title">Prevention Methods</h2>
+            <p class="section-subtitle">Important steps to prevent skin problems</p>
+            
+            <div class="prevention-grid">
+                <div class="prevention-item">
+                    <h3>🌞 Sun Protection</h3>
+                    <ul>
+                        <li>Apply SPF 30+ sunscreen daily</li>
+                        <li>Reapply every 2 hours</li>
+                        <li>Avoid sun between 10 AM to 4 PM</li>
+                        <li>Wear hat and sunglasses</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>💧 Hydration</h3>
+                    <ul>
+                        <li>Drink 8-10 glasses of water daily</li>
+                        <li>Moisturize face regularly</li>
+                        <li>Use a good moisturizer</li>
+                        <li>Keep your body hydrated</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>🧼 Cleansing</h3>
+                    <ul>
+                        <li>Wash face 2 times daily</li>
+                        <li>Wash gently with light hands</li>
+                        <li>Don't use hot water</li>
+                        <li>Use clean towels</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>🥗 Healthy Diet</h3>
+                    <ul>
+                        <li>Eat plenty of fruits and vegetables</li>
+                        <li>Reduce oily and spicy food</li>
+                        <li>Eat milk and yogurt</li>
+                        <li>Get vitamin C rich foods</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>😴 Good Sleep</h3>
+                    <ul>
+                        <li>Sleep 7-8 hours every night</li>
+                        <li>Maintain a regular schedule</li>
+                        <li>Try to sleep early</li>
+                        <li>Stay away from screens</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>😌 Reduce Stress</h3>
+                    <ul>
+                        <li>Exercise or do yoga</li>
+                        <li>Meditate</li>
+                        <li>Do stress-relieving activities</li>
+                        <li>Spend time with family</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>🎯 Lifestyle Tips</h3>
+                    <ul>
+                        <li>Avoid smoking and alcohol</li>
+                        <li>Exercise regularly</li>
+                        <li>Avoid pollution</li>
+                        <li>Remove makeup before bed</li>
+                    </ul>
+                </div>
+
+                <div class="prevention-item">
+                    <h3>💅 Personal Hygiene</h3>
+                    <ul>
+                        <li>Wash hands before touching face</li>
+                        <li>Don't share towels</li>
+                        <li>Don't share cosmetics</li>
+                        <li>Wash pillows weekly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section -->
+    <section id="tips" class="tips">
+        <div class="container">
+            <h2 class="section-title">Daily Tips and Tricks</h2>
+            <p class="section-subtitle">To maintain healthy and beautiful skin</p>
+            
+            <div class="tips-list">
+                <div class="tip-item">
+                    <span class="tip-number">1</span>
+                    <div class="tip-content">
+                        <h4>Choose the Right Cleanser</h4>
+                        <p>Choose a cleanser according to your skin type. Foam-based for oily skin, cream-based for dry skin are good.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">2</span>
+                    <div class="tip-content">
+                        <h4>Don't Forget to Exfoliate</h4>
+                        <p>Exfoliate 1-2 times a week so dead cells can be removed, but don't overdo it as it can damage skin.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">3</span>
+                    <div class="tip-content">
+                        <h4>Sunscreen is Essential</h4>
+                        <p>UV rays are a major factor in aging. Apply at least SPF 30 sunscreen every day, even if it's cloudy.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">4</span>
+                    <div class="tip-content">
+                        <h4>Understand Your Skin</h4>
+                        <p>Everyone's skin is different. Understand your skin type and choose products accordingly.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">5</span>
+                    <div class="tip-content">
+                        <h4>Add Products Slowly</h4>
+                        <p>Add one new product at a time to your skincare routine so you can see which one suits your skin.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">6</span>
+                    <div class="tip-content">
+                        <h4>Wash Pillows Regularly</h4>
+                        <p>Bacteria and dirt can accumulate on pillows. So wash it weekly.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">7</span>
+                    <div class="tip-content">
+                        <h4>Don't Forget to Remove Makeup</h4>
+                        <p>Always remove makeup before going to bed. This closes pores and can cause acne.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">8</span>
+                    <div class="tip-content">
+                        <h4>Exercise</h4>
+                        <p>Exercise increases blood flow and skin gets oxygen and nutrients, making skin glow.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">9</span>
+                    <div class="tip-content">
+                        <h4>Eat Antioxidant Rich Food</h4>
+                        <p>Eggs, nuts, berries and leafy vegetables are rich in antioxidants that keep skin healthy.</p>
+                    </div>
+                </div>
+
+                <div class="tip-item">
+                    <span class="tip-number">10</span>
+                    <div class="tip-content">
+                        <h4>Be Patient</h4>
+                        <p>Skincare results don't come quickly. Give at least 4-6 weeks and then decide which product is working.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            
+            <div class="faq-items">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Does washing with hot water cure acne?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, hot water dries out the skin and causes more oil production. Washing with lukewarm or cool water is better.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Should I squeeze acne or pimples?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, squeezing acne spreads bacteria and leaves scars. Let it heal naturally or consult a dermatologist.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Does eating chocolate cause acne?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Not directly, but excess sugar and oily foods can affect skin. Eating a balanced diet is better.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Can acne be cured overnight?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>In most cases no. Good results take at least 2-4 weeks. Be patient.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Does one product work for all skin types?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No, all skin types are different. Oily, dry, combination and sensitive skin need different products.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Should I consult a dermatologist?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, if the problem is severe or home remedies are not working, consult a dermatologist.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Can babies also have acne?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, babies can have "baby acne" which usually goes away in a few weeks. Acne is more common in adolescence.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Are natural products always safe?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Natural products are usually safe, but some people may be allergic. Test first before using.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <h4>Does acne disappear with age?</h4>
+                        <span class="faq-icon">+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>For most people, acne reduces by the end of their 20s, but some people can have it in adulthood.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>SmileFace</h4>
+                    <p>A trusted companion for your healthy and beautiful skin.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Important Links</h4>
+                    <ul>
+                        <li><a href="#skin-problems">Skin Problems</a></li>
+                        <li><a href="#solutions">Solutions</a></li>
+                        <li><a href="#prevention">Prevention</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📧 Email: info@smileface.com</p>
+                    <p>📱 Phone: +91-XXXXX-XXXXX</p>
+                    <p>📍 Address: India</p>
+                </div>
+            </div>
+            <div class="footer-middle">
+                <!-- <div class="language-switcher">
+                    <label>Language:</label>
+                    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+                    <button class="lang-btn" onclick="changeLanguage('hi')">हिंदी</button>
+                </div> -->
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SmileFace. All rights reserved. | This website is for educational purposes, consult your doctor for medical advice.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

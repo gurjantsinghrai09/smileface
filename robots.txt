@@ -1,11 +1,11 @@
 User-agent: *
 Allow: /
+
+# Block admin and private sections
 Disallow: /admin/
 Disallow: /private/
-Disallow: /*.pdf$
-Disallow: /404.html
 
-Crawl-delay: 1
-Request-rate: 1/1s
+# Allow crawling with no delays
+Crawl-delay: 0
 
 Sitemap: https://smileface.com/sitemap.xml
